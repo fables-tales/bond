@@ -15,6 +15,10 @@ module Bond
           expect(spy.respond_to?(method_name)).to be true
         end
       end
+
+      it "returns self" do
+        expect(spy.public_send(method_name)).to be spy
+      end
     end
   end
 end
