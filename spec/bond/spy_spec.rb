@@ -35,7 +35,8 @@ module Bond
       end
 
       it "sends self to the proxy callback" do
-
+        spy.public_send(method_name)
+        expect(proxy_callback).to have_received(:call).with(spy)
       end
     end
   end
