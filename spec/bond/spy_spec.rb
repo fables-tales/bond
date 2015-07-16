@@ -9,7 +9,7 @@ module Bond
     }
 
     let(:proxy_callback) {
-      lambda { proxy }
+      double(:proxy_callback, :call => proxy)
     }
 
     let(:proxy) {
@@ -32,6 +32,10 @@ module Bond
       it "records the method call on the proxy" do
         spy.public_send(method_name)
         expect(proxy).to have_received(:record_message_received).with(method_name)
+      end
+
+      it "sends self to the proxy callback" do
+
       end
     end
   end
