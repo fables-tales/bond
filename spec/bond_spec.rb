@@ -11,7 +11,7 @@ RSpec.describe Bond do
       expect(bond(:arbitrary)).to be_a_kind_of(Bond::Spy)
     end
 
-    xit "responds to all method calls and records them" do
+    it "responds to all method calls and records them" do
       my_spy = bond(:spy)
       my_spy.this_method_name
       bond_did_you_receive?(my_spy, :this_method_name)
