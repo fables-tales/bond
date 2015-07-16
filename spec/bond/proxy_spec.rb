@@ -11,6 +11,11 @@ module Bond
       it "returns false when no message has been received" do
         expect(proxy.message_received?(method_name)).to be false
       end
+
+      it "returns true when a specifc message has been received" do
+        proxy.record_message_received(method_name)
+        expect(proxy.message_received?(method_name)).to be true
+      end
     end
   end
 end
