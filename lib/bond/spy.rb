@@ -4,7 +4,13 @@ module Bond
 
     end
 
-    def method_name
+    private
+
+    def respond_to_missing?(name, _)
+      true
+    end
+
+    def method_missing(name, *args, &blk)
       self
     end
   end
