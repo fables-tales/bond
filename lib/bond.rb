@@ -8,7 +8,7 @@ module Bond
   end
 
   def bond_did_you_receive?(spy, method_name)
-    unless spy_received_method?(spy)
+    unless spy_received_method?(spy, method_name)
       raise "Expected to receive :#{method_name}"
     end
   end
@@ -23,8 +23,8 @@ module Bond
     }
   end
 
-  def spy_received_method?(spy)
-
+  def spy_received_method?(spy, method_name)
+    registered_proxies.fetch(spy).message_received?(method_name)
   end
 
   def registered_proxies
