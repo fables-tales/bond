@@ -31,7 +31,7 @@ module Bond
 
       it "records the method call on the proxy" do
         spy.public_send(method_name)
-        expect(proxy).to have_received(:record_message_received)
+        expect(proxy).to have_received(:record_message_received).with(method_name)
       end
     end
   end

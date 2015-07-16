@@ -2,7 +2,6 @@ module Bond
   class Spy
     def initialize(name, proxy_callback)
       @proxy = proxy_callback.call
-      p @proxy
     end
 
     private
@@ -17,7 +16,7 @@ module Bond
     end
 
     def __record_message_sent_to_proxy(name)
-      @proxy.record_message_received(name)
+      @proxy.record_message_received
     end
   end
 end
