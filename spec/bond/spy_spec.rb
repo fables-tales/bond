@@ -9,7 +9,11 @@ module Bond
     }
 
     let(:proxy_callback) {
+      lambda { |_| proxy }
+    }
 
+    let(:proxy) {
+      double(:proxy, :record_message_received => nil)
     }
 
     describe "responding to everything" do
@@ -23,6 +27,11 @@ module Bond
 
       it "returns self" do
         expect(spy.public_send(method_name)).to be spy
+      end
+
+      it "records the method call on the proxy" do
+        spy.public_send(method_name)
+        expect(proxy).to have_received(:record_message_received)
       end
     end
   end
