@@ -4,7 +4,7 @@ module Bond
 
     end
 
-    def respond_to?(method_name, method_is_private)
+    def respond_to?(method_name, method_is_private=false)
       true
     end
   end
