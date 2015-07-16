@@ -17,7 +17,7 @@ module Bond
     }
 
     describe "responding to everything" do
-      let(:method_name) { SecureRandom.hex }
+      let(:method_name) { SecureRandom.hex.to_sym }
 
       describe "#respond_to?" do
         it "returns true" do
