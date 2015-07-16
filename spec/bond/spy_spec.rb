@@ -1,4 +1,5 @@
 require "spec_helper"
+require "bond/spy"
 
 module Bond
   RSpec.describe Spy do
