@@ -5,7 +5,11 @@ require "bond/spy"
 module Bond
   RSpec.describe Spy do
     subject(:spy) {
-      Spy.new(:arbitrary)
+      Spy.new(:arbitrary, proxy_callback)
+    }
+
+    let(:proxy_callback) {
+
     }
 
     describe "responding to everything" do
