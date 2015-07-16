@@ -16,7 +16,7 @@ module Bond
     end
 
     def __record_message_sent_to_proxy(name)
-      @proxy.record_message_received
+      @proxy.record_message_received(name)
     end
   end
 end
