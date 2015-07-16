@@ -1,4 +1,5 @@
 require "spec_helper"
+require "bond"
 
 RSpec.describe Bond do
   subject(:bond_holder) {
