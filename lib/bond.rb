@@ -1,5 +1,6 @@
 require "bond/version"
 require "bond/spy"
+require "bond/proxy"
 
 module Bond
   def bond(name)
