@@ -1,4 +1,5 @@
 require "spec_helper"
+require "securerandom"
 require "bond/spy"
 
 module Bond
@@ -8,7 +9,7 @@ module Bond
     }
 
     describe "responding to everything" do
-      let(:method_name) { :method_name }
+      let(:method_name) { SecureRandom.hex }
 
       describe "#respond_to?" do
         it "returns true" do
