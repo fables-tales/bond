@@ -1,4 +1,7 @@
-require 'spec_helper'
+require "spec_helper"
 
-describe Bond do
+RSpec.describe Bond do
+  describe "#bond" do
+
+  end
 end
