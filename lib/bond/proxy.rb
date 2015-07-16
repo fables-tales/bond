@@ -9,7 +9,7 @@ module Bond
     end
 
     def message_received?(method_name)
-      !received_messages.include?(method_name)
+      received_messages.include?(method_name)
     end
 
     protected
