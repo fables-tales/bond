@@ -1,6 +1,6 @@
 module Bond
   class Spy
-    def initialize(name)
+    def initialize(name, proxy_callback)
 
     end
 
