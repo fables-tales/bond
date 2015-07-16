@@ -13,8 +13,8 @@ RSpec.describe Bond do
 
     it "responds to all method calls and records them" do
       my_spy = bond(:spy)
-      my_spy.this_method_name
-      bond_did_you_receive?(my_spy, :this_method_name)
+      my_spy.public_send(method_name)
+      bond_did_you_receive?(my_spy, method_name)
     end
 
     it "fails the test when it didn't receive a method call" do
