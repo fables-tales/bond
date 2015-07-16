@@ -16,6 +16,11 @@ module Bond
         proxy.record_message_received(method_name)
         expect(proxy.message_received?(method_name)).to be true
       end
+
+      it "returns true when a specifc message has been received" do
+        proxy.record_message_received(:arbitrary_other_data)
+        expect(proxy.message_received?(method_name)).to be false
+      end
     end
   end
 end
