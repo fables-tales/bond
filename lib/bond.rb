@@ -1,6 +1,6 @@
 require "bond/version"
 
 module Bond
-  def bond
+  def bond(name)
   end
 end
