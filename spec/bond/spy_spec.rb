@@ -9,7 +9,7 @@ module Bond
     }
 
     let(:proxy_callback) {
-      lambda { |_| proxy }
+      lambda { proxy }
     }
 
     let(:proxy) {
